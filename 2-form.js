@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                      */import"./assets/vendor-CgTBfC_f.js";const r="feedback-form-state",e=document.querySelector(".feedback-form");e.querySelector('input[name="email"]');e.querySelector('textarea[name="message"]');e.addEventListener("input",a);function a(t){const o=t.target.value;localStorage.setItem(r,o)}
+//# sourceMappingURL=2-form.js.map
