@@ -11,6 +11,8 @@ const storageData = localStorage.getItem(STORAGE_KEY);
 if (storageData) {
     try {
         const savedData = JSON.parse(storageData);
+        formData = { ...formData, ...savedData };
+
         if (savedData.email) {
             form.elements.email.value = savedData.email;
           }
@@ -39,6 +41,7 @@ form.addEventListener('submit', (event) => {
     };
     console.log('Form Data', formData);
     localStorage.removeItem(STORAGE_KEY);
+    formData = { email: '', message: '' };
     form.reset();
 });
 
